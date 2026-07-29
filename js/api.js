@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://vibus-backend.onrender.com";
 function cleanCityName(c){ return c.replace(/\s*\(.*?\)\s*/g,"").trim(); }
 function getCurrentHHMM(){
   const d = new Date();
