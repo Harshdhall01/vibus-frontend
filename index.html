@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>H-Bus | Haryana Roadways</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/loading.css">
+</head>
+<body>
+
+<div class="app-shell" id="appShell">
+
+  <!-- ============ SCREEN 1: SEARCH ============ -->
+  <section class="screen active" id="screen-search">
+    <div class="hero">
+      <div class="hero-sky"></div>
+      <div class="hero-glow"></div>
+
+      <svg class="hero-hills" viewBox="0 0 1000 340" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 210 Q120 150 260 195 T520 190 T760 205 T1000 185 V340 H0 Z" fill="#2f63b0" opacity=".45"/>
+        <path d="M0 250 Q150 200 300 235 T600 230 T900 240 T1000 225 V340 H0 Z" fill="#1f4f95" opacity=".55"/>
+        <path d="M0 280 Q200 245 400 270 T800 265 T1000 258 V340 H0 Z" fill="#123a7a" opacity=".65"/>
+      </svg>
+
+      <div class="cloud cloud-1" aria-hidden="true"></div>
+      <div class="cloud cloud-2" aria-hidden="true"></div>
+      <div class="cloud cloud-3" aria-hidden="true"></div>
+
+      <svg class="bird bird-1" viewBox="0 0 24 12" fill="none" aria-hidden="true"><path d="M1 10C4 3 8 3 12 8C16 3 20 3 23 10" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <svg class="bird bird-2" viewBox="0 0 24 12" fill="none" aria-hidden="true"><path d="M1 10C4 3 8 3 12 8C16 3 20 3 23 10" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <svg class="bird bird-3" viewBox="0 0 24 12" fill="none" aria-hidden="true"><path d="M1 10C4 3 8 3 12 8C16 3 20 3 23 10" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg>
+
+      <svg class="hero-road" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true">
+        <rect x="0" y="14" width="1000" height="28" fill="#16264a" opacity=".4"/>
+        <rect x="0" y="26" width="1000" height="3" fill="#fff" opacity=".55" stroke-dasharray="24 18"/>
+      </svg>
+
+      <div class="hero-bus" aria-hidden="true">
+        <svg viewBox="0 0 220 110" width="100%" height="100%">
+          <ellipse cx="110" cy="98" rx="88" ry="7" fill="#04122e" opacity=".28"/>
+          <rect x="14" y="28" width="192" height="56" rx="16" fill="#ffffff"/>
+          <path d="M14 60h192v8a16 16 0 01-16 16H30a16 16 0 01-16-16v-8z" fill="#1a63e0"/>
+          <rect x="14" y="28" width="192" height="10" rx="5" fill="#1652c7"/>
+          <rect x="26" y="36" width="26" height="20" rx="4" fill="#bfe3fa"/>
+          <rect x="58" y="36" width="26" height="20" rx="4" fill="#bfe3fa"/>
+          <rect x="90" y="36" width="26" height="20" rx="4" fill="#bfe3fa"/>
+          <rect x="122" y="36" width="26" height="20" rx="4" fill="#bfe3fa"/>
+          <rect x="154" y="36" width="38" height="20" rx="4" fill="#123a8f"/>
+          <rect x="18" y="70" width="30" height="9" rx="3" fill="#ffcf4d"/>
+          <circle cx="52" cy="90" r="13" fill="#16233d"/>
+          <circle cx="52" cy="90" r="5.5" fill="#dfe9f7"/>
+          <circle cx="168" cy="90" r="13" fill="#16233d"/>
+          <circle cx="168" cy="90" r="5.5" fill="#dfe9f7"/>
+          <rect x="14" y="28" width="10" height="56" rx="5" fill="#e63946"/>
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-logo-badge">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M4 16c0 .88.39 1.67 1 2.22v1.28c0 .83.67 1.5 1.5 1.5S8 20.33 8 19.5V19h8v.5c0 .82.67 1.5 1.5 1.5.82 0 1.5-.67 1.5-1.5v-1.28c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/></svg>
+        </div>
+        <div class="hero-wordmark">H-Bus</div>
+        <div class="hero-subtitle">Haryana Roadways</div>
+        <div class="hero-tagline">Search. Find. Ride.</div>
+      </div>
+    </div>
+
+    <div class="search-card">
+      <div class="field-group from-group">
+        <div class="field-label">From</div>
+        <div class="field-block">
+          <div class="input-wrap">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1652c7" stroke-width="2"><path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+            <input id="fromInput" type="text" placeholder="Enter origin city" autocomplete="off" />
+            <button class="clear-btn" id="fromClear" style="display:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+            </button>
+          </div>
+          <div class="suggestions" id="fromSuggestions" style="display:none;"></div>
+          <div class="swap-col">
+            <button class="swap-btn" id="swapBtn">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-group to-group">
+        <div class="field-label">To</div>
+        <div class="field-block" style="margin-bottom:6px;">
+          <div class="input-wrap plain">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9aa4b2" stroke-width="2"><path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+            <input id="toInput" type="text" placeholder="Enter destination" autocomplete="off" />
+            <button class="clear-btn" id="toClear" style="display:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+            </button>
+          </div>
+          <div class="suggestions" id="toSuggestions" style="display:none;"></div>
+        </div>
+      </div>
+
+      <button class="search-btn" id="searchBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
+        Search Buses
+      </button>
+    </div>
+
+    <div class="section-title">
+      <span class="icon-badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1652c7" stroke-width="2.4" stroke-linecap="round"><path d="M4 18L18 4"/><circle cx="4" cy="18" r="2"/><circle cx="18" cy="4" r="2"/></svg>
+      </span>
+      Popular Routes
+    </div>
+    <div class="popular-grid" id="popularGrid"></div>
+
+    <div style="height:20px;"></div>
+    <nav class="bottom-nav" data-nav-for="search"></nav>
+  </section>
+
+  <!-- ============ SCREEN 2: RESULTS ============ -->
+  <section class="screen" id="screen-results">
+    <div class="top-header">
+      <div class="row1">
+        <button class="icon-btn" id="backToSearch">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div>
+          <div class="top-title">Results</div>
+          <div class="top-sub" id="resultsRouteLabel">Kurukshetra &rarr; Delhi</div>
+        </div>
+        <div style="margin-left:auto; position:relative;">
+          <button class="icon-btn" id="filterBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="filters-row">
+      <div class="pill-btn" id="dateBtn" style="cursor:default;">
+        <span style="display:flex; align-items:center; gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1652c7" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <span id="dateLabel">Today, 25 May</span>
+        </span>
+      </div>
+      <button class="pill-btn" id="sortBtn" style="flex:none; min-width:150px;">
+        <span id="sortLabel">Sort: Earliest</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5b6472" stroke-width="2.2"><path d="M8 4v16M4 8l4-4 4 4M16 20V4M20 16l-4 4-4-4"/></svg>
+      </button>
+    </div>
+
+    <div class="results-count" id="resultsCount">18 Buses Found</div>
+    <div class="bus-list" id="busList"></div>
+    <div style="height:16px;"></div>
+
+    <!-- sort popover -->
+    <div class="popover-backdrop" id="popBackdrop"></div>
+    <div class="popover sort" id="sortPopover" style="display:none;">
+      <div class="popover-item" data-sort="earliest">Earliest <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div>
+      <div class="popover-item" data-sort="latest">Latest <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+      <div class="popover-item" data-sort="duration">Shortest duration</div>
+      <div class="popover-item" data-sort="price">Fewer km first</div>
+    </div>
+
+    <!-- filter sheet -->
+    <div class="sheet" id="filterSheet">
+      <div class="sheet-handle"></div>
+      <h3>Filter buses</h3>
+      <div class="check-row">AC buses <div class="switch on" data-filter="ac"></div></div>
+      <div class="check-row">Non-AC buses <div class="switch on" data-filter="nonac"></div></div>
+      <button class="sheet-apply" id="applyFilterBtn">Apply Filters</button>
+    </div>
+
+    <nav class="bottom-nav" data-nav-for="results"></nav>
+  </section>
+
+  <!-- ============ SCREEN 3: BUS DETAILS ============ -->
+  <section class="screen no-nav" id="screen-details">
+    <div class="top-header">
+      <div class="row1">
+        <button class="icon-btn" id="backToResults">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="top-title">Bus Details</div>
+        <div class="header-actions">
+          <button class="icon-btn" id="shareBtn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1"><path d="M4 12v6a2 2 0 002 2h12a2 2 0 002-2v-6M16 6l-4-4-4 4M12 2v14"/></svg>
+          </button>
+          <button class="icon-btn" id="favBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="favIcon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="details-summary">
+      <div class="ds-row">
+        <div class="ds-avatar">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M4 16c0 .88.39 1.67 1 2.22v1.28c0 .83.67 1.5 1.5 1.5S8 20.33 8 19.5V19h8v.5c0 .82.67 1.5 1.5 1.5.82 0 1.5-.67 1.5-1.5v-1.28c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/></svg>
+        </div>
+        <div>
+          <div class="ds-code" id="dCode">HR_KKR_DEL_02</div>
+          <div class="ds-route"><span id="dFrom">Kurukshetra</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9aa4b2" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg> <span id="dTo">Delhi</span></div>
+        </div>
+      </div>
+      <div class="ds-tags">
+        <span class="chip blue" id="dOperator">Haryana Roadways</span>
+        <span class="chip ac" id="dAcChip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9L4.9 19.1"/></svg>
+          AC
+        </span>
+        <span class="chip" id="dKm">210 km</span>
+      </div>
+
+      <div class="timeline-summary">
+        <div class="ts-col">
+          <div class="ts-label">Departure</div>
+          <div class="ts-value" id="dDepTime">07:15</div>
+          <div class="ts-city" id="dDepCity">Kurukshetra</div>
+        </div>
+        <div class="ts-col center">
+          <div class="ts-label">Duration</div>
+          <div class="ts-value" id="dDuration">2h 45m</div>
+        </div>
+        <div class="ts-col right">
+          <div class="ts-label">Arrival</div>
+          <div class="ts-value" id="dArrTime">10:00</div>
+          <div class="ts-city" id="dArrCity">Delhi</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-banner" id="statusBanner">
+      <span class="pulse-dot" id="pulseDot"></span>
+      <div class="txt">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4 16c0 .88.39 1.67 1 2.22v1.28c0 .83.67 1.5 1.5 1.5S8 20.33 8 19.5V19h8v.5c0 .82.67 1.5 1.5 1.5.82 0 1.5-.67 1.5-1.5v-1.28c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/></svg>
+        <span id="statusText">Bus is on the way</span>
+      </div>
+      <div class="meta">
+        <span id="updatedText">Updated just now</span>
+        <button class="refresh-btn" id="refreshBtn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4v6h6M20 20v-6h-6"/><path d="M5.5 9a7 7 0 0112.9-2.6M18.5 15a7 7 0 01-12.9 2.6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="stops-wrap" id="stopsWrap"></div>
+
+    <div class="info-box">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="8" r=".6" fill="currentColor"/></svg>
+      <span>Timings are estimated and may vary due to traffic and road conditions.</span>
+    </div>
+  </section>
+
+  <!-- ============ SIMPLE SCREENS: favorites / history / profile ============ -->
+  <section class="screen" id="screen-favorites">
+    <div class="simple-header"><h2>Favorites</h2></div>
+    <div class="list-simple" id="favList"></div>
+    <nav class="bottom-nav" data-nav-for="favorites"></nav>
+  </section>
+
+  <section class="screen" id="screen-history">
+    <div class="simple-header"><h2>History</h2></div>
+    <div class="list-simple" id="historyList"></div>
+    <nav class="bottom-nav" data-nav-for="history"></nav>
+  </section>
+
+  <div class="toast" id="toast"></div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/state.js"></script>
+<script src="js/loading.js"></script>
+<script src="js/search.js"></script>
+<script src="js/results.js"></script>
+<script src="js/details.js"></script>
+<script src="js/favorites-history.js"></script>
+</body>
+</html>
