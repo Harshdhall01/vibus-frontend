@@ -50,9 +50,7 @@ function wireAutocomplete(inputId, suggId, clearId){
 wireAutocomplete("fromInput","fromSuggestions","fromClear");
 wireAutocomplete("toInput","toSuggestions","toClear");
 
-document.getElementById("fromInput").value = "Kuru";
-state.from = "Kuru";
-document.getElementById("fromClear").style.display="flex";
+
 
 document.getElementById("swapBtn").onclick = ()=>{
   const fromEl = document.getElementById("fromInput"), toEl = document.getElementById("toInput");

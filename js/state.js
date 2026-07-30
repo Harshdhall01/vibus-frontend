@@ -9,13 +9,28 @@ const state = {
 };
 
 const screens = ["search","results","details","favorites","history"];
-function showScreen(name){
+function showScreen(name, options = {}){
+  const { pushHistory = true } = options;
+
   screens.forEach(s=>{
     document.getElementById("screen-"+s).classList.toggle("active", s===name);
   });
   renderBottomNavs(name);
   window.scrollTo(0,0);
+
+  if (pushHistory) {
+    history.pushState({ screen: name }, "", "#" + name);
+  }
 }
+
+// Handle browser/phone back button — go to the previous screen instead of leaving the site
+window.addEventListener("popstate", (e) => {
+  const targetScreen = (e.state && e.state.screen) || "search";
+  showScreen(targetScreen, { pushHistory: false });
+});
+
+// Set the very first history entry so the first back press has a screen to land on
+history.replaceState({ screen: "search" }, "", "#search");
 
 function toast(msg){
   const t = document.getElementById("toast");
