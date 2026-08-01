@@ -70,7 +70,7 @@ input{font-family:inherit;}
 /* ---------- screens ---------- */
 .screen{
   display:none;
-  min-height:100%;
+  min-height:100vh;
   padding-bottom:92px;
   animation:fadeIn .28s ease;
 }
